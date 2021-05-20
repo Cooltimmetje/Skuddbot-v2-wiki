@@ -1,7 +1,7 @@
 # Free for All
 
 {% hint style="warning" %}
-This page contains features that have not yet been released! Features mentioned on this page may not be final.
+This page contains features that are currently released in **BETA** they may or may not work, and may change at any time!
 {% endhint %}
 
 ## Introduction
@@ -54,14 +54,14 @@ For more information about Game Logs, view the [Game Logs](/Minigames/Game-Logs.
 {% endhint %}
 
 ## Stats
-| Stat                 | Technical name    | Tracks                                                          | Awarded                                            |
-|----------------------|-------------------|-----------------------------------------------------------------|----------------------------------------------------|
-| Wins                 | `FFA_WINS`        | The amount of times the user has won a Free for All             | When the user wins the Free for All                |
-| Losses               | `FFA_LOSSES`      | The amount of times the user has been killed in a Free for All. | When the user gets killed in the Free for All      |
-| Highest entrants win | `FFA_HIGHEST_WIN` | The highest amount of entrants in a game the user has won.      | When the user achieves a new highest entrants win. |
-| Kills                | `FFA_KILLS`       | The amount of kills the user has gotten in a Free for All.      | When the user kills someone in a Free for All      |
-| Bets won             | `FFA_BETS_WON`    | The amount of bets the user has won.                            | When the user wins a bet.                          |
-| Bets lost            | `FFA_BETS_LOST`   | The amount of bets the user has lost.                           | When the user loses a bet.                         |
+| Stat                 | Technical name          | Tracks                                                          | Awarded                                            |
+|----------------------|-------------------------|-----------------------------------------------------------------|----------------------------------------------------|
+| Wins                 | `FFA_WINS`              | The amount of times the user has won a Free for All             | When the user wins the Free for All                |
+| Losses               | `FFA_LOSSES`            | The amount of times the user has been killed in a Free for All. | When the user gets killed in the Free for All      |
+| Highest entrants win | `FFA_HIGHEST_WIN`       | The highest amount of entrants in a game the user has won.      | When the user achieves a new highest entrants win. |
+| Kills                | `FFA_KILLS`             | The amount of kills the user has gotten in a Free for All.      | When the user kills someone in a Free for All      |
+| Bounties survived    | `FFA_BOUNTIES_SURVIVED` | The amount of bounties the user has survived.                   | When the user survives a bounty.                   |
+| Bounties lost        | `FFA_BOUNTIES_LOST`     | The amount of bounties the user has lost.                       | When the user loses a bounty.                      |
 {% hint style="info" %}
 * For more information about stats, view the [stats](/Features/stats.md) article.
 * For more information about the betting system, view the [betting system](#betting-system) section.  
@@ -126,11 +126,11 @@ The command for Free for All is `!freeforall`.
 This command also listens to the following alias: `!ffa`.
 
 #### Command parameters
-| Parameter | Type   | Description                              | Required? |
-| --------- | ------ | ---------------------------------------- | --------- |
-| Bounty    | Number | Defines the bounty the user wants to place. | No        |
-| **OR**    |        |                                          |           |
-| `leave` | Keyword | When the leave keyword is provided the user will leave the game. | Yes  |
+| Parameter | Type   | Description                                                      | Required? |
+| --------- | ------ | ---------------------------------------------------------------- | --------- |
+| Bounty    | Number | Defines the bounty the user wants to place.                      | No        |
+| **OR**    |        |                                                                  |           |
+| `leave`  | Keyword | When the leave keyword is provided the user will leave the game. | Yes       |
 
 {% hint style="info" %}
 Refer for to the [Betting Shortcuts](/Minigames/betting-shortcuts.md) articles, to see what shortcuts are currently available and what you can specify as your bounty.
