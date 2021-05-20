@@ -28,7 +28,7 @@ To request a kitty image, a user uses one of the following commands:
 
 ## Otters
 To request a otter image, a user uses the command:
-- `!otters`
+- `!otter`
 
 ## Owls
 To request a owl image, a user uses one of the following commands:
