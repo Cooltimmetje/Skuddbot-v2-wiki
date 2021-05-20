@@ -8,13 +8,20 @@ There are currently 8 types of messages:
 | Name                     | Technical Name      | Description                                                                            | Maximum Length | Type         |
 |--------------------------|---------------------|----------------------------------------------------------------------------------------|----------------|--------------|
 | AI Name                  | `AI_NAME`           | Used for names of AI players in minigames.                                             | 64             | Text         |
-| Bacon Image              | `BACON`             | Used for URL's to images related to bacon.                                             | 512            | URL of image |
-| Cake Image               | `CAKE`              | Used for URL's to images related to cakes.                                             | 512            | URL of image |
-| Kitty Image              | `KITTY`             | Used for URL's to images of and/or related to cats.                                    | 512            | URL of image |
+| Bat Image                | `BAT`               | Used for URL's of images related to bats.                                              | 512            | URL or image |
+| Bunny Image              | `BUNNY`             | Used for URL's of images related to bunnies.                                           | 512            | URL or image |
+| Cake Image               | `CAKE`              | Used for URL's of images related to cakes.                                             | 512            | URL or image |
+| Guinea Pig Image         | `GUINEA_PIG`        | Used for URL's of images related to guinea pigs.                                       | 512            | URL or image |
+| Kitty Image              | `KITTY`             | Used for URL's of images related to cats.                                              | 512            | URL or image |
+| Otter Image              | `OTTER`             | Used for URL's of images related to otters.                                            | 512            | URL or image |
+| Owl Image                | `OWL`               | Used for URL's of images related to owls.                                              | 512            | URL or image |
+| Panda Image              | `PANDA`             | Used for URL's of images related to panda's.                                           | 512            | URL or image |
 | Playing Status           | `PLAYING`           | Used for text displayed in the playing status of Skuddbot.                             | 128            | Text         |
 | Playing Status Christmas | `PLAYING_CHRISTMAS` | Used for text displayed in the playing status of Skuddbot during the Christmas period. | 128            | Text         |
 | Playing Status New Year  | `PLAYING_NEW_YEAR`  | Used for text displayed in the playing status of Skuddbot during the New Years day.    | 128            | Text         |
-| Puppy Image              | `PUPPY`             | Used for URL's to images of and/or related to dogs.                                    | 512            | URL of image |
+| Puppy Image              | `PUPPY`             | Used for URL's of images related to dogs.                                              | 512            | URL or image |
+| Seal Image               | `SEAL`              | Used for URL's of images related to seals.                                             | 512            | URL or image |
+| Snake Image              | `SNAKE`             | Used for URL's of images related to snakes.                                            | 512            | URL or image |
 
 ## Command
 {% hint style="warning" %}
