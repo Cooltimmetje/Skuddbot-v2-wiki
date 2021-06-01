@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Skuddbot v2 wiki](README.md)
+* [PRIDE MONTH 2021 EVENT](pride-month-2021.md)
 * [Getting started](getting-started.md)
 * Commands
     * [Action commands](/Commands/action-commands.md)
