@@ -1,5 +1,9 @@
 # Daily bonus
 
+{% hint style="warning" %}
+This page contains features that have not yet been released! Features mentioned on this page may not be final.
+{% endhint %}
+
 ## Introduction
 Users can claim a bonus of experience and currency each day. Bonuses scale exponentially if an user can upkeep their streak for claiming their bonus every day.
 
@@ -9,30 +13,46 @@ This command also listens to he following aliases:
 * `!claim`
 * `!db`
 
+## Multiplier & Streak
+Whitin the Daily Bonus system there are 2 main counters, a multiplier, and a streak. Both counters increase and decrease at the same rate. But the multiplier has a cap, and the streak does not. Meaning the mulitplier will stop increasing at a certain amount.
+
+## Building a Multiplier & Streak
+To build a multiplier and a streak a user must claim their bonus on consecutive days. Each consecutive day will increase the multiplier (given it's not a the cap) and streak by 1.
+
+### Missing a day
+When a user misses a day, a penalty will be incurred. The user's multiplier and streak will be decreased by 5 for every day missed. Additionally, the amount of missed days is added to a 'pause' counter. Which means the user's streak and multiplier will be paused until this counter is back at 0.
+
+#### Being paused
+When an user's pause counter is above 0. The users streak and multiplier is paused. This has the following effects;
+* The user's multiplier and streak will not increase.
+* The user's multiplier will not be applied to the bonusses, meaning they will only gain the base amount.
+
+Every day the user claims their bonus, the pause counter will be decreased by one.
+{% hint style="success" %}
+If you only miss one day, your streak will only be paused for that day. Meaning that the next time you claim, given it's on consecutive days, your multiplier will be applied again and your streak and multiplier will increase again.
+{% endhint %}
+
+
 ## Bonus amount
 ### Bonus scaling
-The bonuses scale exponentially. If a user can build up a streak of claiming their bonus every day, they will gain more rewards over time.
-There is a system to cap the scaling at a certain day. When the cap is reached, a user can still claim their bonus every day, but the amount won't grow anymore. The user is however still allowed to grow their streak, and this is also recorded in the stats.
+The bonuses scale exponentially. If a user can build up a streak of claiming their bonus every day, they will also increase their multiplier and gain more rewards over time.
+There is a system to cap the multiplier at a certain day. When the cap is reached, a user can still claim their bonus every day, but the amount won't grow anymore. The user is however still allowed to grow their streak, and this is also recorded in the stats.
 
 The bonus amount is calculated using the following formula:  
-![](https://i.imgur.com/ZRjexJ3.png)
+![](https://i.imgur.com/SNI3GS8.png)
 
 ### Controlling bonus amounts
-Server owners can control the amounts of bonuses their users can claim every day. The following things can be customized with the `!serversettings` command:
+Server admins can control the amounts of bonuses their users can claim every day. The following things can be customized with the `!serversettings` command:
 * Currency base amount
 * Experience base amount
-* Bonus multiplier
+* Bonus modifier
 * Bonus multiplier cap
 {% hint style="info" %}
 For more information about [controlling bonus amounts](/Features/server-settings.md#daily-bonus), view the [Server settings](/Features/server-settings.md) article.
 {% endhint %}
 
 ### Weekly bonus
-When a user has reached their cap, their bonus will no longer increase. But when they have hit their cap, they will be eligible for a weekly bonus. Once a week (every 7th day), the user will receive double their normal bonus. 
-The user does not need to do anything to get the bonus, if it is the 7th day and the user claims their daily bonus, the weekly bonus is automatically applied.
-
-#### Ineligble for weekly bonus
-A user can be ineligble for the weekly bonus, this is due to a cooldown on the weekly bonus, this can happen when the user has missed a day of claiming. The cooldown is 7 days.
+When the user reached their multiplier cap, their streak will to continue to grow. For every day the user is at the mulitplier cap, and is not 'paused' by missing days, an additional counter for a weekly bonus will increase. Once this counter reaches 7, the user will receive their weekly bonus, doubling the amount of currency and experience gained.
 
 ## Cutoff point and offset
 You can claim your bonus once per day. By default, a day is from midnight UTC until 23:59:59 UTC. This means the cutoff is, by default, at midnight UTC.
@@ -50,7 +70,7 @@ To figure out what your offset is, you can use the list of timezones on [timeand
 For more information about user settings, view the [User settings](/Features/user-settings.md) article.
 {% endhint %}
 
-## Streaks
+## Building a streak and multiplier
 ### Continuing and building a streak
 To upkeep a streak, a user must claim their bonus on consecutive days, before the cutoff point.
 
