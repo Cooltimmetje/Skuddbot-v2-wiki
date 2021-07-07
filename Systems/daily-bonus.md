@@ -52,7 +52,7 @@ For more information about [controlling bonus amounts](/Features/server-settings
 {% endhint %}
 
 ### Weekly bonus
-When the user reached their multiplier cap, their streak will to continue to grow. For every day the user is at the mulitplier cap, and is not 'paused' by missing days, an additional counter for a weekly bonus will increase. Once this counter reaches 7, the user will receive their weekly bonus, doubling the amount of currency and experience gained.
+Every 7 days the user isn't 'paused', they will be eligable for a weekly bonus. This means their pay out for that day will be double. This does not apply to any seasonal bonusses.
 
 ## Cutoff point and offset
 You can claim your bonus once per day. By default, a day is from midnight UTC until 23:59:59 UTC. This means the cutoff is, by default, at midnight UTC.
@@ -75,7 +75,7 @@ For more information about user settings, view the [User settings](/Features/use
 To upkeep a streak, a user must claim their bonus on consecutive days, before the cutoff point.
 
 ### Losing a streak
-Users can lose their streak when they do not claim their streaks on consecutive day. A penalty of 5 days is incurred for every day the user has missed.
+Users can lose their streak when they do not claim their streaks on consecutive day. A penalty of 5 days is incurred for every day the user has missed. Every missed day is added to the pause counter.
 
 ### Viewing a streak
 Streaks are recorded in the stats of a user, and can be viewed using the `!stats` command.
